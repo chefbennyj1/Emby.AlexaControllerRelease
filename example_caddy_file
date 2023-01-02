@@ -1,0 +1,55 @@
+YOUR_DOMAIN_NAME http://INTERNAL_IP_OF_EMBY_SERVER {
+
+    tls YOUR_EMAIL_ADDRESS
+    timeouts none
+    gzip
+    cors / {
+	origin		  *
+    	origin            *
+        methods           GET
+	allowed_headers	  *
+    	
+    }
+    proxy / INTERAL_IP_OF_EMBY_SERVER {
+        websocket
+	transparent
+    }
+
+
+    header / {
+	-Server
+	Access-Control-Allow-Origin  *
+	Access-Control-Allow-Methods "GET, POST, OPTIONS"
+	Strict-Transport-Security "max-age=31536000;"
+        Cache-Control "public, max-age=31536000"
+	Referrer-Policy "strict-origin"
+	X-XSS-Protection "1; mode=block"
+	X-Content-Type-Options "nosniff"
+	X-Frame-Options "DENY"
+    }   
+
+    nobots "https://blog.haschek.at/tools/bomb.php" {
+           "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+           "Googlebot/2.1 (+http://www.google.com/bot.html)"
+	   "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+ 	   "Googlebot-News"
+	   "Googlebot-Image/1.0"
+     	   "Googlebot-Video/1.0"
+	   "compatible; Mediapartners-Google/2.1; +http://www.google.com/bot.html"
+	   "Mediapartners-Google"
+	   "AdsBot-Google (+http://www.google.com/adsbot.html)"
+	   "AdsBot-Google-Mobile-Apps"
+	   "APIs-Google (+https://developers.google.com/webmasters/APIs-Google.html)"
+	   regexp "Googlebot"
+	   public "^/public"
+  	   public "^/[a-z]{,5}/public"
+    }
+
+    # Optional logging
+    log theater.log
+
+}
+
+
+
+
