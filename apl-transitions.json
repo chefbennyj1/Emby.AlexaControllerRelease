@@ -2,6 +2,38 @@
     "type": "APL",
     "version": "2023.1",
     "commands": {
+        "LogoAnimation": {
+      "commands": [
+        {
+          "type": "bounceInUp",
+          "duration": 1200
+        },
+        {
+          "type": "Idle",
+          "duration": 5000
+        },
+        {
+          "type": "AnimateItem",
+          "duration": 700,
+          "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+          "value": [
+            {
+              "property": "transform",
+              "from": [
+                {
+                  "translateX": "0"
+                }
+              ],
+              "to": [
+                {
+                  "translateX": "-250px"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
         "bounce": {
             "parameters": [
                 "duration",
