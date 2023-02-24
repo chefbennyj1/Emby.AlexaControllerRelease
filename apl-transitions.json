@@ -21,6 +21,7 @@
                             },
                             "repeatCount": 0,
                             "duration": 200,
+                            
                             "screenLock": false,
                             "easing": "ease-in"
                         },
@@ -37,7 +38,6 @@
                             },
                             "repeatCount": 0,
                             "duration": 200,
-                            "delay":200,
                             "screenLock": false,
                             "easing": "ease-in"
                         }
