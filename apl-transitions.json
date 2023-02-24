@@ -34,7 +34,7 @@
                                 }
                             },
                             "duration": 200,
-                            "delay":100,
+                            "delay":200,
                             "easing": "ease-out"
                         }
                     ]
