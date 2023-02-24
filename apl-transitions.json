@@ -4,7 +4,11 @@
     "commands": {
         "InAndOut":{
           "commands":[
-          {
+              "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                     {
                       "type": "AnimateItem",
                       "value": {
                         "property": "transform",
@@ -37,6 +41,9 @@
                       "screenLock": false,
                       "easing": "ease-in"
                     }
+          ]
+        }
+          
           ]
         },
         "LogoAnimation": {
