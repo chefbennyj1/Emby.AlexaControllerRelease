@@ -38,8 +38,9 @@
                             },
                             "repeatCount": 0,
                             "duration": 200,
+                            "delay":100,
                             "screenLock": false,
-                            "easing": "ease-in"
+                            "easing": "ease-out"
                         }
                     ]
                 }          
